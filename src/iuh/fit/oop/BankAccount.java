@@ -86,6 +86,7 @@ public class BankAccount {
 	public void transfer(BankAccount other, double amount) {
 		if(other == null || amount <= 0 || amount > balance) {
 			System.out.println("Transfer failed!");
+			return;
 		}
 		this.withdraw(amount);
 		other.deposit(amount);
